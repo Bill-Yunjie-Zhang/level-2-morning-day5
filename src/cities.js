@@ -1,0 +1,11 @@
+const cityData = require("all-the-cities")
+
+console.log(cityData.length)
+console.log(cityData.filter(e => e.population > 10000000))
+console.log(cityData.find(e => e.name === "Chengdu"))
+console.log(cityData.filter(e => e.country === "CN"))
+console.log(cityData.sort((a, b) => b.population - a.population))
+console.log(cityData.filter(e => e.country === "CA").sort((a, b) => b.population - a.population))
+console.log(cityData.map(e => e.name + ": " + e.population))
+cityData.map(e => e.name).sort().forEach(e => console.log(e))
+console.log(cityData.filter(e => e.country.charAt(0) === "C"))
